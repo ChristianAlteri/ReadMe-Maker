@@ -1,9 +1,9 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
-const generateMarkdown = require('./utils/generateMarkdown');
+// const generateMarkdown = require('./utils/generateMarkdown');
 // const formatParagraphToList = require('./utils/generateMarkdown/formatParagraphToList');
-// const formatParagraphToList = require('./utils/formatParagraphToList');
+const {formatParagraphToList , generateMarkdown} = require('./utils/generateMarkdown.js');
 
 
 // TODO: Create a function to write README file
@@ -12,7 +12,8 @@ class User {
         if (confirm === 'y'){
             this.title = title;
             this.description = description;
-            formatParagraphToList(this.paragraph) = paragraph;
+            this.paragraph = paragraph;
+            // formatParagraphToList(this.paragraph) = paragraph;
             this.confirm = confirm;
         }
     }  
@@ -29,10 +30,10 @@ class User {
         const data = {
             title: this.title,
             description: this.description,
-            paragraph: this.paragraph,
+            paragraph: formatParagraphToList(this.paragraph),
             
         }
-        formatParagraphToList(paragraph)
+        
         const README = generateMarkdown(data);
         fs.writeFileSync('./README.md', README);
     }

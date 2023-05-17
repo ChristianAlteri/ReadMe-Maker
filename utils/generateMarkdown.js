@@ -34,9 +34,8 @@ function generateMarkdown(data) {
   return `# ${data.title} 
 ## ${data.description}
 
-(To insert image use this) ![Alt text](./assets/Landing-page.jpg?raw=true "Website landing page")
-
 ## Function
+${data.paragraph}
 1. Launch the Toyota Green Trips web app on your preferred device.
 2. On the main interface, locate the input fields for the start location, end location, and Toyota model selection.
 3. Enter the starting location of your trip in the designated field. This can be the address, suburb, or city name.
@@ -62,5 +61,8 @@ MIT License
 `;
 }
 
-module.exports = generateMarkdown;
-module.exports = formatParagraphToList;
+module.exports = {
+  generateMarkdown,
+   formatParagraphToList
+};
+// module.exports = formatParagraphToList;
