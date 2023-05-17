@@ -2,14 +2,17 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
+// const formatParagraphToList = require('./utils/generateMarkdown/formatParagraphToList');
+// const formatParagraphToList = require('./utils/formatParagraphToList');
 
 
 // TODO: Create a function to write README file
 class User {
-    constructor({ title, description, confirm }) {
+    constructor({ title, description, paragraph, confirm }) {
         if (confirm === 'y'){
             this.title = title;
             this.description = description;
+            formatParagraphToList(this.paragraph) = paragraph;
             this.confirm = confirm;
         }
     }  
@@ -25,8 +28,11 @@ class User {
     readMeMaker(){
         const data = {
             title: this.title,
-            description: this.description
+            description: this.description,
+            paragraph: this.paragraph,
+            
         }
+        formatParagraphToList(paragraph)
         const README = generateMarkdown(data);
         fs.writeFileSync('./README.md', README);
     }
@@ -43,9 +49,14 @@ function start() {
           name: 'title',
         },
         {
-          type: 'input',
-          message: 'Describe your repos purpose?',
-          name: 'description',
+            type: 'input',
+            message: 'Describe your repos purpose?',
+            name: 'description',
+        },
+        {
+            type: 'input',
+            message: 'Describe the functionality of your repo. (use full stops to line break and add a number to the list)',
+            name: 'paragraph',
         },
         {
           type: 'input',

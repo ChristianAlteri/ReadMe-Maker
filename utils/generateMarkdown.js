@@ -16,6 +16,19 @@ function renderLicenseSection(license) {
   
 }
 
+function formatParagraphToList(paragraph) {
+  // Split the paragraph into individual sentences
+  const sentences = paragraph.split('. ');
+
+  // Generate the numbered list
+  const listItems = sentences.map((sentence, index) => `${index + 1}. ${sentence}`);
+
+  // Join the list items with line breaks to form the final formatted list
+  const formattedList = listItems.join('\n');
+
+  return formattedList;
+}
+
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title} 
@@ -50,3 +63,4 @@ MIT License
 }
 
 module.exports = generateMarkdown;
+module.exports = formatParagraphToList;
