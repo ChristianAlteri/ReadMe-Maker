@@ -1,8 +1,8 @@
-# Christians Homework 
+# Christians Repo 
 
 ## Description 
 
-To pass all asssignments above 90%
+to create a professional README
 
 ## Table of contents:
 
@@ -24,18 +24,16 @@ node index.js
 
 ## Usage
 ```
-1. I learn
-2. I learn some more
-3. I love to learn the course material
-4. I continue to learn more
-5. Ive learnt everything.
+1. You answer all these comman line prompts
+2. then go to the output folder
+3. upload your readme and license.
 ```
 
 ###
 
-Written by Christian Alteri
+Written by Christian ALteri
 
-To learn more about my project, [click here](https://chat.openai.com/).
+To learn more about my project, [click here](www.github.com).
 
 ####
 

@@ -6,6 +6,8 @@ This command line function enables users to effortlessly generate professional R
 
  ![Alt text](./Assets/Screen%20Shot%202023-05-19%20at%2011.26.39%20am.png "Command Line Prompts")
 
+ [Link to Video of working APP](https://drive.google.com/file/d/1Cp7M5bnhzL9RQsuyeFV9hDPOjrKwckQH/view)
+
 ## Table of contents:
 
 * Title
@@ -38,6 +40,16 @@ Written by Christian Alteri
 
 To learn more about my project, [click here](https://github.com/ChristianAlteri/ReadMe-Maker).
 
+## How to Contribute
+
+Download the source code and add functionality. Request to merge onto Master dev branch
+
+## Tests
+
+Test by running node index.js
+
+
 ####
+
 
 [![License](https://img.shields.io/badge/LICENSE-MIT-red)](LICENSE)
